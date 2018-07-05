@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Curling
+namespace Curling.Controls
 {
     /// <summary>
-    /// Interaction logic for UserControl1.xaml
+    /// Interaction logic for GyroBox.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class GyroBox : UserControl
     {
-        public UserControl1()
+        public GyroBox()
         {
             InitializeComponent();
         }
