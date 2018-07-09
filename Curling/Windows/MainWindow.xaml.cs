@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Curling.Controls;
 
 namespace Curling
 {
@@ -23,6 +24,15 @@ namespace Curling
         public MainWindow()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
+        }
+
+        private void Gyro_Click(object sender, RoutedEventArgs e)
+        {
+            GyroBox gyroBox = new GyroBox();
+
+            MainGrid.Children.Add(gyroBox);
+            Grid.SetColumn(gyroBox, 1);
         }
     }
 }

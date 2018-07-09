@@ -18,6 +18,15 @@
                    TextAlignment="Center"
                    Padding="15pt"
                    FontSize="30pt">Gyro</TextBlock>
+        <Button Grid.Row="0"
+                FontSize="20pt"
+                Height="30pt"
+                Width="30pt"
+                TextBlock.TextAlignment="Center" 
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right" 
+                x:Name="Close" 
+                Click="Close_Click">✕</Button>
         <TextBlock Grid.Row="2"
                    FontSize="28pt"
                    TextAlignment="Center">reeeee</TextBlock>
