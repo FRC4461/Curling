@@ -23,8 +23,7 @@ namespace Curling
     {
         public MainWindow()
         {
-            InitializeComponent();
-            WindowState = WindowState.Maximized;
+            InitializeComponent();         
         }
 
         private void Gyro_Click(object sender, RoutedEventArgs e)
@@ -33,6 +32,7 @@ namespace Curling
 
             MainGrid.Children.Add(gyroBox);
             Grid.SetColumn(gyroBox, 1);
+            Grid.SetRow(gyroBox, 1);
         }
     }
 }

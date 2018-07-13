@@ -11,13 +11,31 @@
             <ColumnDefinition x:Name="SidebarColumn" Width="160pt"/>
             <ColumnDefinition x:Name="DashboardColumn"/>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16pt"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.ColumnSpan="2"
+                   Grid.Row="0"
+                   Background="White">
+            <Menu>
+                <MenuItem Header="File" Width="Auto">
+                    <MenuItem Header="_Open"/>
+                    <MenuItem Header="_Save"/>
+                </MenuItem>
+            </Menu>
+            <Button Width="Auto" HorizontalAlignment="Right">Open Playbook</Button>
+        </DockPanel>
         <StackPanel Grid.Column="0"
+                    Grid.Row="1"
                     Background="CornflowerBlue">
             <Button x:Name="Gyro" Background="AliceBlue" Click="Gyro_Click">Gyro</Button>
             <Button x:Name="Combobox" Background="AliceBlue">Combobox</Button>
         </StackPanel>
         <Grid x:Name="Dashboard"
               Grid.Column="1"
-              Background="Pink"></Grid>
+              Grid.Row="1"
+              Background="Pink"
+              ScrollViewer.CanContentScroll="True"></Grid>
     </Grid>
 </Window>

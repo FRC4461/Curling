@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
+using System.Windows.Controls.Primitives;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Curling.Controls
 {
@@ -20,14 +10,25 @@ namespace Curling.Controls
     /// </summary>
     public partial class GyroBox : UserControl
     {
+        private GyroBox gyroBox;
+        TranslateTransform transform = new TranslateTransform();
+
         public GyroBox()
         {
             InitializeComponent();
+            gyroBox = this;
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             Visibility = Visibility.Collapsed;
+        }
+
+        private void Thumb_DragDelta(object sender, DragDeltaEventArgs e)
+        {
+            transform.X += e.HorizontalChange;
+            transform.Y += e.VerticalChange;
+            gyroThumb.RenderTransform = transform;
         }
     }
 }
